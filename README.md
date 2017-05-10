@@ -7,4 +7,4 @@
 - 编辑界面:
   - [修改文章](https://github.com/Lchiffon/newBlog/issues)
   - [增加新文章](https://github.com/Lchiffon/newBlog/issues/new)
-- [Click for building](http://github.com/Lchiffon/newBlog/settings/hooks/13692883/test)
+- [Click for building](http://github.com/Lchiffon/newBlog/settings/hooks/13692883)
