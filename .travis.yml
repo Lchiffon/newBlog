@@ -31,4 +31,4 @@ after_script:
   - git config user.name "lchiffon" # 注意修改用户名
   - git config user.email "chiffonlang@icloud.com" # 注意修改邮箱
   - git commit -m "update from travis-ci"
-  - git push https://${GH_TOKEN}@github.com/lchiffon/newBlog.git master:master # 注意项目地址及分支名，这里的例子分支是 `gh-pages`
+  - git push https://${GH_TOKEN}@github.com/lchiffon/newBlog.git master:gh-pages # 注意项目地址及分支名，这里的例子分支是 `gh-pages`
