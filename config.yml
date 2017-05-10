@@ -16,7 +16,7 @@ disqus: acyort
 language: zh-CN
 
 # theme
-theme: donob
+theme: ccc45
 
 # pagination
 # set 0 if no need paging
@@ -38,7 +38,7 @@ default_category: uncategorized
 
 # html output directory or child directory e.g. 'child'
 # default "/"
-public_dir: public
+public_dir: doc
 
 # category directory
 # default "category"
