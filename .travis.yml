@@ -20,6 +20,7 @@ script:
   - cd ../
   - acyort init
   - cp config.bak.yml config.yml
+  - cat config.yml
   - rm config.bak.yml
   # - git clone https://github.com/acyortjs/theme-donob.git themes/donob # 如果使用默认主题，可以不要这句
   - acyort build
