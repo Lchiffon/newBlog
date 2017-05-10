@@ -13,23 +13,23 @@ install:
   - npm install acyort -g
 
 before_script:
-  - git clone https://github.com/lchiffon/newBlog.git public # public 这个目录跟你的 config.yml 设置一样
-  - cd public
-  - git checkout gh-pages
+  ##- git clone https://github.com/lchiffon/newBlog.git public # public 这个目录跟你的 config.yml 设置一样
+  ##- cd public
+  ##- git checkout gh-pages
 
 script:
-  - cd ../
-  - acyort init
-  - cp config.bak.yml config.yml
-  - cat config.yml
-  - rm config.bak.yml
+  ##- cd ../
+  ##- acyort init
+  ##- cp config.bak.yml config.yml
+  ##- cat config.yml
+  ##- rm config.bak.yml
   # - git clone https://github.com/acyortjs/theme-donob.git themes/donob # 如果使用默认主题，可以不要这句
   - acyort build
 
 after_script:
-  - cd public
+  #- cd public
   - git add .
   - git config user.name "lchiffon" # 注意修改用户名
   - git config user.email "chiffonlang@icloud.com" # 注意修改邮箱
   - git commit -m "update from travis-ci"
-  - git push https://${GH_TOKEN}@github.com/lchiffon/newBlog.git gh-pages:gh-pages # 注意项目地址及分支名，这里的例子分支是 `gh-pages`
+  - git push https://${GH_TOKEN}@github.com/lchiffon/newBlog.git master:master # 注意项目地址及分支名，这里的例子分支是 `gh-pages`
