@@ -15,6 +15,7 @@ install:
 before_script:
   - git clone https://github.com/lchiffon/newBlog.git public # public 这个目录跟你的 config.yml 设置一样
   - cd public
+  - git checkout master
   ##- git checkout gh-pages
 
 script:
