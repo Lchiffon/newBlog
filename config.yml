@@ -1,17 +1,88 @@
-# site title
+# site
 title: Blog
+description: this is a blog
+keywords:
+rss: rss.xml
+favicon:
 
-# github user
+# site url. you can set as 'http://yoursite.com/child' if need
+# please add 'http://' or 'https://'
+url: http://langdawei.com/newBlog
+
+# comment
+disqus: acyort
+
+# language
+language: zh-CN
+
+# theme
+theme: ccc45
+
+# pagination
+# set 0 if no need paging
+per_page: 5
+archives_per_page: 30
+
+# thumbnail mode
+# 1: use the first image as thumbnail and remove the image
+# 2: use the first image as thumbnail but not remove the image
+thumbnail_mode: 2
+
+#menu
+menu:
+  archives: /archives
+  categories: /category
+
+# category
+default_category: uncategorized
+
+# html output directory or child directory e.g. 'child'
+# default "/"
+public_dir: public
+
+# category directory
+# default "category"
+category_dir:
+
+# tag directory
+# default "tag"
+tag_dir:
+
+# post directory
+# default "posts"
+post_dir:
+
+# archives directory
+# default "archives"
+archives_dir:
+
+# site content source
+# your github username/repository
 user: Lchiffon
+repository: newBlog
 
-# issue repo
-repo: newBlog
-
-# multi-author
+# post authors
+# github username
 authors:
+    - Lchiffon
+#  - author0
+#  - author1
 
-# per page
-per_page: 10
+# GitHub access token(optional)
+# token should be separated by '#' if you push this file to GitHub
+token: 8#0641be8ad8149f143c7c7b163f317b07c38aac6
 
-#sandbox
-sandbox: false
+# json output
+# boolean or string
+# you can set json output path
+json: false
+
+# dev mode
+dev: false
+
+# other
+# customize some settings if you need
+
+# duoshuo:
+# blogroll:
+#  GitHub: https://github.com
