@@ -7,7 +7,7 @@ favicon:
 
 # site url. you can set as 'http://yoursite.com/child' if need
 # please add 'http://' or 'https://'
-url: http://langdawei.com/demo
+url:
 
 # comment
 disqus: acyort
