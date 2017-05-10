@@ -38,7 +38,7 @@ default_category: uncategorized
 
 # html output directory or child directory e.g. 'child'
 # default "/"
-public_dir: public
+public_dir: docs
 
 # category directory
 # default "category"

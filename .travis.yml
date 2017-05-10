@@ -13,11 +13,12 @@ install:
   - npm install acyort -g
 
 before_script:
-  ##- git clone https://github.com/lchiffon/demo.git public # public 这个目录跟你的 config.yml 设置一样
-  ##- cd public
+  - git clone https://github.com/lchiffon/newBlog.git public # public 这个目录跟你的 config.yml 设置一样
+  - cd public
+  - git checkout gh-pages
 
 script:
-  ##- cd ../
+  - cd ../
   - acyort init
   - cp config.bak.yml config.yml
   - cat config.yml
