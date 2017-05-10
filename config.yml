@@ -1,0 +1,17 @@
+# site title
+title: Blog
+
+# github user
+user: lchiffon
+
+# issue repo
+repo: newBlog
+
+# multi-author
+authors:
+
+# per page
+per_page: 10
+
+#sandbox
+sandbox: false
