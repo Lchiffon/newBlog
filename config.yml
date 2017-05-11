@@ -1,88 +1,36 @@
-# site
-title: Blog
-description: this is a blog
-keywords:
-rss: rss.xml
-favicon:
+# https://github.com/acyortjs/demo.git 为存放网站文件项目地址
+# https://github.com/acyortjs/theme-donob.git themes/donob 为博客主题，如果你使用默认主题则可以去掉这句
+# ${GH_TOKEN} 为你在 travis-ci 设置的变量
+# public 为在 config.yml 设置的 public_dir 目录
+# 注意修改这里提交的用户名，邮箱
+# 这里提交的分支是 gh-pages，根据你的实际情况修改
 
-# site url. you can set as 'http://yoursite.com/child' if need
-# please add 'http://' or 'https://'
-url:
+language: node_js
 
-# comment
-disqus: acyort
+node_js: 6.0.0
 
-# language
-language: zh-CN
+install:
+  - npm install acyort -g
 
-# theme
-theme: ccc45
+before_script:
+  - git clone https://github.com/lchiffon/demo.git public # public 这个目录跟你的 config.yml 设置一样
+  - cd public
+  # - git checkout master
+  ##- git checkout gh-pages
 
-# pagination
-# set 0 if no need paging
-per_page: 5
-archives_per_page: 30
+script:
+  - cd ../
+  - acyort init
+  - cp config.bak.yml config.yml
+  - cat config.yml
+  - rm config.bak.yml
+  - git clone https://github.com/lchiffon/theme-donob.git themes/donob # 如果使用默认主题，可以不要这句
+  - acyort build
 
-# thumbnail mode
-# 1: use the first image as thumbnail and remove the image
-# 2: use the first image as thumbnail but not remove the image
-thumbnail_mode: 2
-
-#menu
-menu:
-  archives: /archives
-  categories: /category
-
-# category
-default_category: uncategorized
-
-# html output directory or child directory e.g. 'child'
-# default "/"
-public_dir: public
-
-# category directory
-# default "category"
-category_dir:
-
-# tag directory
-# default "tag"
-tag_dir:
-
-# post directory
-# default "posts"
-post_dir:
-
-# archives directory
-# default "archives"
-archives_dir:
-
-# site content source
-# your github username/repository
-user: Lchiffon
-repository: newBlog
-
-# post authors
-# github username
-authors:
-    - Lchiffon
-#  - author0
-#  - author1
-
-# GitHub access token(optional)
-# token should be separated by '#' if you push this file to GitHub
-token: 8#0641be8ad8149f143c7c7b163f317b07c38aac6
-
-# json output
-# boolean or string
-# you can set json output path
-json: false
-
-# dev mode
-dev: false
-
-# other
-# customize some settings if you need
-
-# duoshuo:
-# blogroll:
-#  GitHub: https://github.com
+after_script:
+  - cd public
+  - git add .
+  - git config user.name "lchiffon" # 注意修改用户名
+  - git config user.email "chiffonlang@icloud.com" # 注意修改邮箱
+  - git commit -m "update from travis-ci"
+  - git push https://${GH_TOKEN}@github.com/lchiffon/demo.git gh-pages:gh-pages # 注意项目地址及分支名，这里的例子分支是 `gh-pages`
